@@ -132,7 +132,7 @@ footer:after{
    background: var(--header);
    color: white;
    margin:0px 6px 0px 2px;
-   padding:8px;
+   padding:8px 12px;
    border:0;
    outline:0;
    transition-duration: 0.8s;
@@ -185,4 +185,8 @@ footer:after{
 .recieve a,.sent a{
    color: #40c4ff;
    text-decoration: none;
+}
+.recieve span{
+   position: absolute;
+   right:0;
 }

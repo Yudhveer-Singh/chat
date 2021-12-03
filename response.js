@@ -2,13 +2,13 @@ function sendRecieve(k){
    $(".content").append('<div class="msgBox"><div class="recieve">'+k+'</div></div>');
 }
 var map= new Map();
-map.set("hi","Hello")
-.set("hello","Hello!!")
-.set("how are you","I'm fine,<br>What about you?")
+map.set("how are you","I'm fine,<br>What about you?")
+.set("time","The time is <b><h1>"+getTime()+"</h1></b>")
 .set("who are you","I'm an artificial Chatbot.")
+.set("you doin","I am totally free for chatting with you.")
 .set("you born","I was born on November 28, 2021")
 .set("goodbye","Goodbye,<br>It was a nice talk with you.")
-.set(" day","Today is "+getDay()+".")
+.set("day","Today is <h1><b>"+getDay()+"</b></h1>")
 .set("fine","Nice to hear that you're fine.")
 .set("your name","You can call me by any name that you like.")
 .set("my name","I can’t think of it")
@@ -51,6 +51,8 @@ map.set("hi","Hello")
 .set("you","me")
 .set("he","Yes he is.")
 .set("who","That's you")
+.set("hi","Hello")
+.set("hello","Hello!!")
 .set("how","I am not good at reasoning")
 .set("bye","bye-bye,<br>See you soon!");
 var all=map.entries();
@@ -143,6 +145,12 @@ function getDay(){
        break;
    }
 }
-$(".content").append('<div class="msgBox"><div class="recieve">'+"Hey"+'</div></div>');
+$(".content").append('<div class="msgBox"><div class="recieve">'+"Hey"/*+getTime()*/+'</div></div>');
 $(".content").append('<div class="msgBox"><div class="recieve">'+getWish()+"!!"+'</div></div>');
 $(".content").append('<div class="msgBox"><div class="recieve">'+"How can I help you?"+'</div></div>');
+function getTime(){
+   let date=new Date();
+   let hrs=date.getHours();
+   let min=date.getMinutes();
+   return hrs+":"+min;
+}
